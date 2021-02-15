@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index5</title>
+
+<script type="text/javascript">
+	function writeCookie(){
+		const now = new Date()
+		now.setMonth(now.getMonth() + 1)
+
+		cookievalue = escape(document.formname.customer.value) + ";" + document.cookie = "name = "+cookievalue
+		document.write("Setting cookies : "+" name = "+cookievalue)		
+	}
+
+</script>
+
+</head>
+<body>
+
+	<form name="formname" action="">
+		<label for="name">Enter Name : </label>
+		<input type="text" name="name" id="name">
+		<button type="button" onclick="writeCookie()">Set Cookie</button>
+	</form>
+
+</body>
+</html>

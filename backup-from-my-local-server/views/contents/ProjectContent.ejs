@@ -1,0 +1,46 @@
+<h1 class="underline mb-5 mt-2"></h1>
+
+       <div class="container">
+            <h1 class="text-center mt-2 mb-3">
+                List <span> Project </span> 
+            </h1>
+                        
+            <div class="d-flex justify-content-center">
+               <div class="row">
+               	<% projects.ProjectData.map(data => { %>
+                   <div class="col-md-4 col-xs-12 col-sm-12">
+                        <div class="card-pricing">
+                             <a class="img-card-pricing" href=""  data-toggle="lightbox" data-gallery="projects">
+                              	<img src="images/<%=data.img_path%>" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important; color: rgb(255,228,181);border-radius:0%;"/>
+                            </a>  
+                        	
+                        	<div class="card-content-pricing">
+                            	<h4 class="card-title">
+                            		<%= data.company  %>
+                            	</h4>
+                            	<p class="text-success"><%=data.jobdesk%></p>
+                            	<blockquote class="blockquote-footer" style='color:lightskyblue;'>
+                            		<%=data.description%>
+                                </blockquote>
+                                
+                                <p class="text-justify">
+                                	<%= data.content %>
+                                </p>
+                                <small class="text-primary">
+                                	<%=data.year%>
+                                </small>
+                        	</div>
+                                                    
+                        	<div class="card-read-more-pricing">
+                           		<a href="<%=data.link%>" class="btn btn-link btn-block">
+                                   	Lihat Project
+                            </a>
+                        	</div>
+                                
+                		</div>
+                    </div>                
+                    <% }) %>
+               	</div>
+            </div>
+
+       	</div>

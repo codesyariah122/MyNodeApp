@@ -1,0 +1,30 @@
+.mainPage{
+	display: flex;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.Left{
+	flex: 1;
+	background: grey;
+	.bg-image{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.Right{
+	width: 460px;
+	background: #fff;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	.title{
+		font-size: 20px;
+		font-weight: 900;
+		color: salmon;
+	}
+}

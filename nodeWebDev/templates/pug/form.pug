@@ -1,0 +1,21 @@
+- var title = "Demo Interpolasi";
+doctype html
+html(lang="en")
+	head
+		link(rel="stylesheet" type="text/css" href="./styles.css")
+		title #{title}
+body
+	h1 #{title}
+	form(action="/" method="post")
+		input(type="text" name="nama" placeholder="Nama Lengkap") 
+		br
+		br
+		input(type="text" name="email" placeholder="Alamat Email")
+		br
+		br
+		button(type="submit" value="kirim" id="submit") Submit
+
+//- script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+script(src="https://cdn.jsdelivr.net/npm/sweetalert2@9")
+
+script(type="text/javascript" src="./MyScript.js")

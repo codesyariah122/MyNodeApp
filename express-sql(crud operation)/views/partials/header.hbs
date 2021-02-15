@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav mx-auto ml-2">
+                {{#each menus as |data|}}
+                    <li class="menu-item">
+                        <a class="nav-link" href="{{data.url}}">{{data.label}}</a>
+                    </li>
+                {{/each}}
+<!--                 <li class="menu-item">
+                    <a class="nav-link" href="/blog">blog</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</nav>

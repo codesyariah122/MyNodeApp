@@ -1,0 +1,29 @@
+{
+  "name": "express.app",
+  "version": "1.0.0",
+  "description": "express awesome fullstack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node -r dotenv/config server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pujiermanto",
+  "license": "ISC",
+  "dependencies": {
+    "consolidate": "^0.15.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "mjs": "^1.0.0",
+    "module": "^1.2.5",
+    "module.js": "^2.2.4",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "pug": "^3.0.0",
+    "querystring": "^0.2.0",
+    "readline-sync": "^1.4.10",
+    "swig": "^1.4.2"
+  }
+}

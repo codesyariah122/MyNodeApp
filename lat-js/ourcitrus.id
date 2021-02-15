@@ -1,0 +1,3 @@
+# Nmap 7.40 scan initiated Wed Aug  5 23:56:08 2020 as: nmap -sV -n -o ourcitrus.id
+WARNING: No targets were specified, so 0 hosts scanned.
+# Nmap done at Wed Aug  5 23:56:08 2020 -- 0 IP addresses (0 hosts up) scanned in 0.28 seconds

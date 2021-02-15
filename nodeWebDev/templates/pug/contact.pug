@@ -1,0 +1,24 @@
+html(lang="en")
+	head
+		link(rel="stylesheet" type="text/css" href="./styles.css")
+		title #{title}
+
+body
+
+	header 
+		h1 #{header}
+		ul
+			//- each elemen in daftar
+			//- 	li #{elemen}
+			- var i = 0
+			- var link = ['/', '/about', '/contact']
+			while i < daftar.length
+				li 
+					a(href=link[i]) #{daftar[i++]}
+
+main
+	h3 #{main}
+	small #{author}
+	- var i = 0
+		while i < content.length
+			p #{content[i++]}

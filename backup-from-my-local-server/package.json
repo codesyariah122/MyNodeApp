@@ -1,0 +1,34 @@
+{
+  "name": "puji.dev",
+  "version": "1.0.0",
+  "description": "pujiermanto | fullstack.dev",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pujiermanto",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "babel-install": "^2.1.0",
+    "body-parser": "^1.19.0",
+    "consolidate": "^0.15.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-async-await": "^1.1.0",
+    "express-react-views": "^0.11.0",
+    "location-href": "^1.0.0",
+    "mongoose": "^5.11.13",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "pug": "^3.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "swig": "^1.4.2"
+  }
+}

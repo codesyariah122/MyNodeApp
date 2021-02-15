@@ -1,0 +1,465 @@
+
+@font-face {
+    font-family: 'SpringSakura';
+    font-style: normal;
+    font-weight: normal;
+    src: local('SpringSakura'), url('/fonts/SpringSakura-3z1m8.otf') format('otf');
+}
+
+@font-face {
+    font-family: 'Reey Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Reey Regular'), url('/fonts/Reey-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lemon/Milk Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('https://github.com/codesyariah122/kerjaan-syoobe/blob/main/for_page/fonts/Lemon__Milk%20400.otf') format('otf');
+}
+
+.navbar{
+    position: relative;
+    z-index:1;
+}
+
+.navbar-brand{
+    font-family: 'Poiret One';
+    font-weight: 900;
+    font-size: 32px!important;
+    text-transform: capitalize;
+}
+
+.transparent-nav{
+    background : rgba(255,255,240, 0.3);
+    margin-top: .5rem;
+}
+
+.white{
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.active{
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Utility */
+.tombol {
+    text-transform: uppercase;
+    border-radius: 40px !important;
+    font-family:'Lemon/Milk Regular';
+    font-weight:normal;
+    font-size:42px;
+}
+
+/* jumbotron */
+.jumbotron {
+    /* background-size: cover;
+    height: 540px; */
+    text-align: center;
+    position: relative;
+    
+    background-color: #17234E;
+    margin-top:0rem;
+    margin-bottom: 0;
+    min-height: 100vh;
+    width :100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.jumbotron .container{
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom:0;
+}
+
+.jumbotron .display-4 {
+    color: white;
+    margin-top: 150px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.jumbotron .display-4 span {
+    font-weight: 500;
+    color:tomato;
+    font-family: 'Reey Regular';
+}
+
+/* info-panel */
+.info-panel{
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -100px;
+    background-color: white;
+    padding: 30px;
+}
+
+.info-panel img{
+    height: 100px;
+    width: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.info-panel h4{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.info-panel p {
+    font-size: 14px;
+    color: #ACACAC;
+    margin-top: -5px;
+    font-weight: 200;
+}
+
+// waves
+ .box-wave {
+      width: 350px;
+      height: 800px;
+      border-radius: 10px;
+      box-shadow: 0 0 1px rgba(black, .1);
+      background: screen(#f0f4c3, 10%);
+      position: relative;
+      overflow: hidden;
+      // transform: translate3d(0, 0, 0);
+    }
+    
+    .wave {
+      opacity: .4;
+      position: absolute;
+      top: 3%;
+      left: 50%;
+      background: #0af;
+      width: 500px;
+      height: 700px;
+      margin-left: -250px;
+      margin-top: -250px;
+      transform-origin: 50% 48%;
+      border-radius: 43%;
+      animation: drift 3000ms infinite linear;
+    }
+    
+    .wave.-three {
+      animation: drift 5000ms infinite linear;
+    }
+    
+    .wave.-two {
+      animation: drift 7000ms infinite linear;
+      opacity: .1;
+      background: yellow;
+    }
+    
+    .box-wave:after {
+      content: '';
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+      z-index: -1;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .title-wave {
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+      line-height: 300px;
+      text-align: left;
+      transform: translate3d(0, 0, 0);
+      color: white;
+      font-weight: bold;;
+      text-transform: uppercase;
+      font-family: 'Poiret One', cursive;
+      letter-spacing: .4em;
+      font-size: 14px;
+      text-shadow: 0 1px 0 rgba(black, .1);
+    }
+    .titl-wave a{
+        margin-left: 2rem;
+    }
+    @keyframes drift {
+      from { transform: rotate(0deg); }
+      from { transform: rotate(360deg); }
+    }
+
+/* content page */
+/* polaroid */
+.polaroid{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+    color: rgb(255,228,181);
+    position: relative;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top:5rem;
+}
+.polaroid img{
+    width: 250px;
+    height: 150px;
+    margin-top: 1rem;
+}
+.polaroid-body{
+    h2{
+      padding: 25px;
+      color:black;
+      font-family: 'Poiret One', cursive;font-weight:bold;
+      font-size: 25px;
+    }
+    span{
+      font-family: 'SpringSakura';
+    }
+    img{
+      border-radius:70%;
+      width: 250px !important;
+      height: 250px !important;
+      margin-top: -5rem !important;
+    }
+}
+/* end polaroid */
+
+.websiteku{
+    text-transform: uppercase;
+    color: tomato;
+    font-family:'Lemon/Milk Regular';
+}
+
+
+.underline:after{
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    position: relative;
+    margin-bottom:2rem;
+    width: 100px;
+    height: 2px;
+    background:rgb(255, 99, 78);
+}
+
+
+.parallax{
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0;
+}
+
+.caption {
+    background:rgba(255,255,255,0.3);
+    /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+    position: absolute;
+    margin-top: 17rem;
+    width: 50%;
+    text-align: center;
+    color: #000;
+}
+.caption h2 {
+    font-family: 'Poiret One', cursive;font-weight:bold;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: .9rem;
+    font-size: 21px;
+}
+.caption a{
+    font-size: 18px;
+}
+
+
+  .wrapper-pricing {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+
+.card-pricing {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.card-pricing:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card-pricing {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card-pricing img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover; 
+  transition: all .25s ease;
+} 
+.card-content-pricing {
+  padding:15px;
+  text-align:left;
+}
+.card-title-pricing {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title-pricing a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more-pricing {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more-pricing a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+@media only screen and (max-device-width: 812px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) { 
+    /* navbar */
+    .navbar-brand, .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+    .nav-link{
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+    .nav-link:hover::after{
+        content:'';
+        display: block;
+        border-bottom: 3px solid #0B63DC;
+        width: 50%;
+        margin:auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .active{
+      font-weight: 900;
+      font-style: italic;
+      text-transform: capitalize;
+      color: salmon!important;
+    }
+
+    .transparent-nav{
+        background : rgba(0, 0, 0, 0.3);
+        margin-top: .5rem;
+    }
+    /* jumbotron */
+    .jumbotron{
+        margin-top: -75px;
+        height: 640px;
+    }
+    .jumbotron .display-4{
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* content */
+    .polaroid{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+        color: rgb(255,228,181);
+        position: relative;
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top:-5rem;
+    }
+
+    .polaroid-body h2{
+        padding: 25px;
+        color:black;
+        font-family: 'Poiret One', cursive;font-weight:bold;
+        font-size: 25px;
+    }
+
+    .polaroid img{
+        width: 100%;
+        height: 500px;
+        margin-top: -1rem;
+    }
+
+    /* all parallax top and bottom */
+    .parallax{
+        min-height: 500px; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin:0;
+      }
+      
+      .caption {
+          background:rgba(255,255,255,0.9);
+          /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+          position: absolute;
+          margin-top: 17rem;
+          width: 50%;
+          text-align: center;
+          color: #000;
+      }
+      .caption h2 {
+          font-family: 'Poiret One', cursive;font-weight:bold;
+          text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+          margin-bottom: .9rem;
+          font-size: 21px;
+      }
+      .caption a{
+          font-size: 18px;
+      }
+
+      .waves {
+          height: 40px;
+          min-height: 40px;
+      }
+
+ }

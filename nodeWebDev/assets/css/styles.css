@@ -1,0 +1,67 @@
+header {
+  background: rgba(100, 255, 0, 0.7);
+  width: 85%;
+  text-align: center;
+  position: fixed;
+  margin-top: -16.9rem;
+  margin-left: 5rem;
+  display: inline-block;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+.row ul {
+  display: flex;
+  list-style-type: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.row li {
+  margin-left: 1rem;
+}
+.row #home:hover {
+  background: lime;
+  height: 5vh;
+}
+.row #about:hover {
+  background: lime;
+  height: 5vh;
+}
+.row a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active {
+  background: rgba(255, 100, 0, 0.9);
+  box-shadow: 0.4rem 0.2rem #fdd69c;
+}
+
+h1, h2, h3, h4 {
+  color: #fff;
+}
+
+main {
+  background-color: #006f6f;
+  height: 70vh auto;
+  width: 86%;
+  margin-top: 17rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: 5rem;
+  box-shadow: 0.7rem 0.9rem #c1bcbc;
+}
+main h4 {
+  margin-top: 5rem;
+  width: 100%;
+}
+main p {
+  color: #fff;
+  padding: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

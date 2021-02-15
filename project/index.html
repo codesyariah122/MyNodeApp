@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+
+		<input type="text" v-model="newTask" @keyup.enter="addTask">
+		<button @click="addTask">add task</button>
+
+		<ul>
+			<li v-for="item in items" :key="item.id">
+				<span v-if="item.done">&#10003;</span>
+				<span v-if="!item.done">&#11036;</span>
+
+				<span v-if="!editId === item.id">{{ item.name }}</span>
+
+				<input type="text" v-model="editTask" v-if="editId === item.id">
+				<span v-if="!editId">
+					<button @click="remove(item)">&times;</button>
+					<button @click="edit(item)">Edit</button>
+				</span>
+				<span v-if="editId === item.id">
+					<button @click="update(item)">Update</button>
+					<button @click="cancel">Cancel</button>
+				</span>
+		</ul>
+	</div>
+
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<script type="text/javascript">
+	new Vue({
+		el: '#app',
+		// data
+		data() {
+			return {
+				newTask: "",
+				editTask: "",
+				editId: null,
+
+				items: [
+					{id: 1, name: 'Makan nasi', done: false},
+					{id: 2, name: 'Minum susu', done: true},
+					{id: 3, name: 'Tidur siang', done: false},
+					{id: 4, name: 'Olahraga', done: true},
+				]
+			}
+		},
+		// method
+		methods: {
+			addTask() {
+				this.items.push({
+					name: this.newTask,
+					done: false,
+				})
+				this.newTask=''
+			},
+
+			remove(item) {
+				const index = this.items.indexOf(item)
+				// console.log(index)
+				this.items.splice(index, 1)
+			},
+
+			edit(item){
+				this.editId = item.id
+				this.editTask = item.name
+			},
+
+			update(item){
+
+			},
+
+			cancel() {
+				this.editId = ''
+				this.editTask = ''
+			}
+		}
+
+	})
+</script>
+</body>
+</html>

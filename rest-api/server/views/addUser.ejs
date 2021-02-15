@@ -1,0 +1,14 @@
+<% include('./partials/startTemplate.ejs')%>
+
+<h1><%=header.textContent%></h1>
+
+<fieldset>
+	<legend>List User</legend>
+
+	<% fetch.userData.map(data => {%>
+		<%=data.name%>
+	<%})%>
+
+</fieldset>
+
+<% include('./partials/endTemplate.ejs') %>

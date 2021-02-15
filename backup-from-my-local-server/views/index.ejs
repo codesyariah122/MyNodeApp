@@ -1,0 +1,18 @@
+<%-include('./templates/head.ejs') %>
+<%- include('./templates/links.ejs') %>
+<%- include('./templates/navigation.ejs') %>
+<%- include('./contents/jumbotron.ejs') %>
+
+<div id="contentApp">    
+    <div class="container">
+    	<% if(template == "HomeContent.ejs"){ %>
+	      	<%- include('./contents/HomeContent.ejs') %>
+	    <% } else if(template == "AboutContent.ejs"){ %>
+		    <%- include('./contents/AboutContent.ejs') %>
+		<% } else if(template == "ProjectContent.ejs"){ %>
+			<%- include('./contents/ProjectContent.ejs') %>
+		<% } %>
+    </div>
+</div>
+
+<%- include('./templates/script.ejs')%>

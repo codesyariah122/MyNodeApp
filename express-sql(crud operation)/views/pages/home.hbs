@@ -1,0 +1,77 @@
+<div class="row">
+	<div class="col-12">
+
+		<h4 class="text-muted text-center">
+			{{header}}
+		</h4>
+	</div>
+</div>
+
+<div class="row justify-content-center">
+	<div class="col-md-6">
+		
+		<a href="/add-new" class="btn btn-primary btn-md mb-5">Add New</a>
+
+		<table class="table table-dark">
+		  <thead>
+		    <tr>
+		      <th scope="col">Product Name</th>
+		      <th scope="col">Price</th>
+		      <th scope="col">Options</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	{{#each products as |data|}}
+			    <tr>
+			      <td>{{data.name}}</td>
+			      <td>{{data.price}}</td>
+			      <td>
+			      		<a href="/detail/{{data.id}}" class="btn btn-sm btn-success ml-2">Detail</a>
+
+			      		<a href="/edit/{{data.id}}" class="btn btn-sm btn-info ml-2">Edit</a>
+
+			      		<a href="/delete/{{data.id}}" class="btn btn-sm btn-danger ml-2">Delete</a>
+			      </td>
+			    </tr>
+		    {{/each}}
+		  </tbody>
+		</table>
+
+	</div>
+</div>
+
+<div class="row justify-content-center">
+	<div class="col-md-4">
+
+		<p class="text-muted text-center loading">Loading</p>
+		<div class="card" style="width: 18rem;">
+		  <ul class="list-group list-group-flush product-list">
+		  </ul>
+		</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	</div>
+</div>
+
+

@@ -1,0 +1,32 @@
+
+	<div class="container">
+
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h1 class="text-muted text-center mt-5 mb-3">{{header}}</h1>
+
+				<table class="table table-dark">
+				  <thead>
+				    <tr>
+				      <th scope="col">Product Name</th>
+				      <th scope="col">Option</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	{{#each product}}
+				  		{{#dataValues}}
+						    <tr>
+						      <td>{{name}}</td>
+						      <td>
+						      		<a href="" class="btn btn-sm btn-success">Detail</a>
+						      </td>
+						    </tr>
+				    	{{/dataValues}}
+				    {{/each}}
+				  </tbody>
+				</table>
+
+			</div>
+		</div>
+
+	</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index4</title>
+
+<script type="text/javascript">
+	function ReadCookie(){
+		let allcookies = document.cookie;
+		document.write('All cookie : '+allcookies)
+	}
+	// Get all the cookies pairs in an array
+	cookieArray = allcookies.split(';');
+
+	// Now take key value pair out of this array
+	for(let i = 0; i<cookieArray.length; i++){
+		name = cookieArray[i].split('=')[0];
+		value = cookieArray[i].split('=')[1];
+		document.write("Key is : "+name+" and value is : "+value);
+	}
+</script>
+
+</head>
+<body>
+
+<p>Click the following button and see the result : </p>
+
+<button type="button" onclick="ReadCookie()">Get Cookie</button>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+main {
+  height: 100vh; }
+
+.card-title {
+  color: crimson; }
+
+.card {
+  background: rgba(255, 255, 255, 0.9); }
+
+.card-img-top {
+  opacity: 0.2; }
+
+#back-home {
+  border-radius: 2.5rem;
+  margin-top: .5rem; }
+
+#back-home:hover {
+  background: #de6f6f;
+  color: rgba(255, 255, 255, 0.7);
+  border: none; }
+
+#home {
+  border-radius: 2rem;
+  width: 45%; }
+
+#home:hover {
+  background: #de6f6f;
+  color: rgba(255, 255, 255, 0.7);
+  border: none; }
+
+#about {
+  border-radius: 2rem;
+  width: 45%; }
+
+#about:hover {
+  background: #de6f6f;
+  color: rgba(255, 255, 255, 0.7);
+  border: none; }
+
+#contact {
+  border-radius: 2rem;
+  width: 45%; }
+
+#contact:hover {
+  background: rgba(0, 0, 234, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  border: none; }
+
+/*# sourceMappingURL=styles.css.map */

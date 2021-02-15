@@ -1,0 +1,19 @@
+<%- include('./partials/startTemplate.ejs')%>
+
+<h1><%=header.textContent%></h1>
+
+<fieldset>
+	<legend>List data</legend>
+	<ul>
+		<% fetch.projectData.forEach(data => {%>
+			<li><%=data.name%></li>
+		<%})%>
+	</ul>
+
+</fieldset>
+
+<button type="button" class="btn">Display today's date</button>
+    <div class="date"></div>
+    
+
+<%- include('./partials/endTemplate.ejs') %>

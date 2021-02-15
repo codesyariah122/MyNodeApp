@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+            <div class="col-md-8 mt-5">
+                <div class="polaroid mt-5">
+                    <img src="images/<%=polaroid.img %>" class="img-responsive" alt="">
+                    <div class="polaroid-body">
+                      <img src="<%=profile.avatar_url%>">
+                        <h2>
+                           <%=profile.name%>
+                        </h2>
+                        <small class="text-success">
+                          <%=profile.login%>
+                        </small>
+                        <blockquote class="text-primary">
+                        	<%=profile.bio%> <br/>
+                          <span class="text-info">
+                            <a href="<%=profile.blog%>">
+                              Portfolio
+                            </a>
+                          </span>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="col-md-12">
+            <h1 class="underline"></h1>
+        </div>
+        
+    </div>
+    <!-- akhir container -->
+	
+    <!-- parallax -->
+
+<div class="parallax" style="background-image: url('images/<%=parallax.img%>');">
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class='box-wave'>
+          <div class='wave -one'></div>
+          <div class='wave -two'></div>
+          <div class='wave -three'></div>
+          <div class='title-wave'>
+            <h4>
+                <%= parallax.content %>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>

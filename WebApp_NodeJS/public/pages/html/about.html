@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{{title}}</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+	<h1>{{header}}</h1>
+
+<div id="main">
+	<button id="home">Back To Home</button>
+	<button id="contact">contact Page</button>	
+</div>
+
+<script type="text/javascript">
+	let home = document.querySelector('#home');
+	let contact = document.querySelector('#contact');
+	home.style.cursor="pointer";
+	contact.style.cursor="pointer";
+
+	home.addEventListener('click', function(){
+		window.location.href='/';
+	})
+
+	contact.addEventListener('click', function(){
+		window.location.href='/contact';
+	})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+main{
+	height: 100vh;
+}
+
+.card-title{
+	color: $heading-1;
+}
+
+.card{
+	background: $card-background;
+}
+
+.card-img-top{
+	opacity: 0.2;
+}
+
+#back-home{
+	border-radius: 2.5rem;
+	margin-top: .5rem;
+}
+
+#back-home:hover{
+	background: $button-about;
+	color: $font-button;
+	border:none;
+}
+
+#home{
+	border-radius: 2rem;
+	width: 45%;	
+}
+
+#home:hover{
+	background: $button-about;
+	color:$font-button;
+	border:none;
+}
+
+#about{
+	border-radius: 2rem;
+	width: 45%;
+}
+
+#about:hover{
+	background: $button-about;
+	color:$font-button;
+	border:none;
+}
+
+#contact{
+	border-radius: 2rem;
+	width: 45%;
+}
+
+#contact:hover{
+	background: $button-contact;
+	color:$font-button;
+	border:none;
+}
+
+// html{
+// 	background:$background;
+// }
+
+// h1{
+// 	color: $heading-1;
+// 	border: 5px solid rgba(244, 255, 234, 1);
+// 	border-style: dashed;
+// 	text-align: center;
+// 	margin-top: 5rem;
+// }
+
+// #main {
+// 	display: flex;
+// 	justify-content: center;
+// }
+
+// #about {
+// 	background:$button-about;
+// 	color: #fff;
+// 	font-size: 1.5rem;
+// 	margin-right: 2rem;
+// 	box-shadow: .5rem .4rem $box-shadow;
+// 	border: none;
+// }
+
+// #contact {
+// 	background:$button-contact;
+// 	color: #fff;
+// 	font-size: 1.5rem;
+// 	margin-right: 2rem;
+// 	box-shadow: .5rem .4rem $box-shadow;
+// 	border: none;
+// }
+
+// #home{
+// 	background:$button-home;
+// 	color: #fff;
+// 	font-size: 1.5rem;
+// 	margin-right: 2rem;
+// 	box-shadow: .5rem .4rem $box-shadow;
+// 	border: none;
+// }

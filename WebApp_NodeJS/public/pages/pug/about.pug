@@ -1,0 +1,35 @@
+doctype html
+
+html(lang="en")
+
+	head
+
+		meta(charset="utf-8")
+
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+		link(rel="stylesheet" type="text/css" href="css/styles.css")
+
+		title #{title}
+
+body
+
+	h1 #{header}
+
+	div(id="main")
+		button(id="home") Back to home
+		button(id="contact") Contact Dev
+
+script.
+	let home = document.querySelector('#home');
+	let contact = document.querySelector('#contact');
+	home.style.cursor="pointer";
+	contact.style.cursor="pointer";
+
+	home.addEventListener('click', function(){
+		window.location.href='/';
+	})
+
+	contact.addEventListener('click', function(){
+		window.location.href='/contact';
+	})

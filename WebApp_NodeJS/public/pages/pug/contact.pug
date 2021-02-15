@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+
+	head
+
+		meta(charset="utf-8")
+
+		meta(name="viewport" content="device-width, initial-scale=1.0")
+
+		link(rel="stylesheet" type="text/css" href="css/styles.css")
+
+		title #{title}
+
+body
+
+	h1 #{header}
+
+	div(id="main")
+		button(id="home") Back to Home
+		button(id="about") About Dev
+
+script.
+
+	let home = document.querySelector('#home');
+	let about = document.querySelector('#about');
+	home.style.cursor="pointer"
+	about.style.cursor="pointer"
+
+	home.addEventListener('click', function(){
+		window.location.href='/';
+	})
+
+	about.addEventListener('click', function(){
+		window.location.href='/about';
+	})

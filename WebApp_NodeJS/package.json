@@ -1,0 +1,23 @@
+{
+  "name": "puji.dev",
+  "version": "1.0.0",
+  "description": "pujiermanto | fullstack.dev",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pujiermanto",
+  "license": "ISC",
+  "dependencies": {
+    "consolidate": "^0.15.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "pug": "^3.0.0",
+    "swig": "^1.4.2"
+  }
+}
