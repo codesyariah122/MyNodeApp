@@ -1,3 +1,15 @@
+// test promise
+const User = new Promise((resolve, reject) => {
+	const data = [
+		{id:1, username: "admin", email: "admin@email.com"},
+		{id:2, username: "user2", email: "user2_@email.com"}
+	]
+	resolve(
+		data
+	)
+})
+
+
 const cardList = document.querySelector('.product-list')
 const loading = document.querySelector('.loading')
 const detail = document.querySelector('#detail')
@@ -64,3 +76,6 @@ document.addEventListener('click', function(e){
 		})
 	}
 })
+
+
+
