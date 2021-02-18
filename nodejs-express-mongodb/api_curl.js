@@ -46,16 +46,29 @@ switch(ask_a){
 	break;
 
 	case 4:
-		const allUser = shell.exec('curl -X GET http://localhost:5000/api/users', {silent: false}).stdout
-		console.log(allUser)
+		const allUserUpdate = shell.exec('curl -X GET http://localhost:5000/api/users', {silent: false}).stdout
+		console.log(allUserUpdate)
 		console.log("Pilih id user yang akan di update")
-		let idUser = String(readline.question("Masukan id user : ? "))
-		if(idUser){
+		const idUserUpdate = String(readline.question("Masukan id user : ? "))
+		if(idUserUpdate){
 			let fullname = String(readline.question("Name ?"))
 			let email = String(readline.question("Email ?"))
-			curl = shell.exec(`curl -d "email=${email}&fullname=${fullname}" -X PUT http://localhost:5000/api/users/updated/${idUser}`, {silent: true}).stdout
+			curl = shell.exec(`curl -d "email=${email}&fullname=${fullname}" -X PUT http://localhost:5000/api/users/updated/${idUserUpdate}`, {silent: true}).stdout
 		}
 	break;
+
+	case 5:
+		const allUserDelete = shell.exec('curl -X GET http://localhost:5000/api/users', {silent: false}).stdout
+		console.log(allUserDelete)
+		console.log("Pilih id user yang akan di delete")
+		const idUserDelete = String(readline.question("Masukan id user : ? "))
+		if(idUserDelete){
+			curl = shell.exec(`curl -X DELETE http://localhost:5000/api/users/deleted/${idUserDelete}`, {silent: false}).stdout
+		}
+	break;
+
+	default:
+		console.log("Maaf pilihan tidak tersedia")
 }
 
 console.log(curl)
