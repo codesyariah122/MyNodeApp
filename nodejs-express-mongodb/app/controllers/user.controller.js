@@ -89,7 +89,7 @@ const update = (req, res) => {
 	})
 }
 
-const delete = (req, res) => {
+const deleted = (req, res) => {
 	const id = req.params.id
 
 	User.findByIdAndRemove(id)
@@ -131,6 +131,6 @@ export default {
 	findAll,
 	findByOne,
 	update,
-	delete,
+	deleted,
 	deleteAll
 }
