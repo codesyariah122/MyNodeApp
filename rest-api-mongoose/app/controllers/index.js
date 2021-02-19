@@ -27,7 +27,8 @@ export const getUsersById = async(req, res) => {
 export const createUsers = async(req, res) => {
 	const userdata = req.body
 	try {
-		const newUser = await new UserData(userdata)
+		const newUser = new UserData(userdata)
+		await newUser.save()
 		res.status(201).json({
 			data: newUser
 		})
