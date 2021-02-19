@@ -88,48 +88,53 @@
 // })
 
 
-const http = require('http')
+// const http = require('http')
 
-const pug = require('pug')
+// const pug = require('pug')
 
-const ejs = require('ejs')
+// const ejs = require('ejs')
 
-const fs = require('fs')
+// const fs = require('fs')
 
-const port = process.env.PORT || 3000
+// const port = process.env.PORT || 3000
 
-require('dotenv').config();
+// require('dotenv').config();
 
-const server = http.createServer((req, res) => {
-	if(req.url === '/styles.css'){
-		res.writeHead(200, {'Content-Type':'text/html'})
-		let fileContents=fs.readFileSync('./styles.css', {encoding:'utf-8'})
-		res.write(fileContents)
-		res.end()
-	}else if(req.url == '/'){
-		let data = {
-			title: 'Home Page', 
-			header: 'Welcome in my express application', 
-			daftar:['Home', 'About', 'Contact'],
-			link: ['/', '/about', '/contact']
-		}
+// const server = http.createServer((req, res) => {
+// 	if(req.url === '/styles.css'){
+// 		res.writeHead(200, {'Content-Type':'text/html'})
+// 		let fileContents=fs.readFileSync('./styles.css', {encoding:'utf-8'})
+// 		res.write(fileContents)
+// 		res.end()
+// 	}else if(req.url === '/promise.js'){
+// 		res.writeHead(200, {'Content-Type':'text/html'})
+// 		let fileContents=fs.readFileSync('./promise.js', {encoding:'utf-8'})
+// 		res.write(fileContents)
+// 		res.end()
+// 	}else if(req.url == '/'){
+// 		let data = {
+// 			title: 'Home Page', 
+// 			header: 'Welcome in my express application', 
+// 			daftar:['Home', 'About', 'Contact'],
+// 			link: ['/', '/about', '/contact']
+// 		}
 
-		let template = pug.renderFile('./templates/pug/index.pug', data)
-		res.end(template)		
-	}else if(req.url == '/about'){
-		let data = {
-			title: 'About Page', 
-			header: 'This is About Page', 
-			daftar:['Home', 'About', 'Contact'],
-			link: ['/', '/about', '/contact']
-		}		
-		let template = pug.renderFile('./templates/pug/about.pug', data)
-		res.end(template)
-	}
+// 		let template = pug.renderFile('./templates/pug/index.pug', data)
+// 		res.end(template)		
+// 	}else if(req.url == '/about'){
+// 		let data = {
+// 			title: 'About Page', 
+// 			header: 'This is About Page', 
+// 			daftar:['Home', 'About', 'Contact'],
+// 			link: ['/', '/about', '/contact']
+// 		}		
+// 		let template = pug.renderFile('./templates/pug/about.pug', data)
+// 		res.end(template)
+// 	}
 
-}).listen(port);
+// }).listen(port);
 
-console.log(`Server running on port ${port}`)
+// console.log(`Server running on port ${port}`)
 
 
 // const http = require('http')

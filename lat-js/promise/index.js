@@ -59,7 +59,8 @@
 // 	}, 2500)
 // })
 // .catch(err => console.log(err))
-// import XMLHttpRequest from 'xhr2'
+
+import XMLHttpRequest from 'xhr2'
 
 // const getUsers = (url, success, error) => {
 // 	let req = new XMLHttpRequest()
@@ -82,7 +83,72 @@
 // 	req.send()
 // }
 
+const getUsers = (url) => {
+	return 
+		new Promise(function(resolve, reject) {
+		let req = new XMLHttpRequest()
+		req.open('GET', url)
+
+		req.onload = () => {
+			if(req.readyState === 4){
+				if(req.status === 200){
+					resolve(JSON.parse(req.response))
+				}else if(req.status === 404){
+					reject(Error(req.status))
+				}
+			}
+		}
+
+		req.onerror = () =>{
+			reject(Error("Network error"))
+		}
+
+		req.send()
+	})
+} 
+
 // getUsers('http://localhost:5000/api/users', res => {
-// 	const data = JSON.parse(res)
-// 	console.log(data)
+// 	console.log(res)
 // }, (err) => console.log(err))
+
+
+getUsers('http://localhost:5000/api/users')
+.then((response) => {
+	console.log(response)
+}, (err) => console.log('Fetch data error : ',err))
+
+// import fetch from 'node-fetch'
+
+// const Product = new Promise ( resolve => {
+// 	const data = [
+// 			{name: "VueJS Hoodie", price: "150000"},
+// 			{name: "ReactJS tshirt", price: "120000"}
+// 		]
+// 	resolve(
+// 		data
+// 	)
+// })
+
+// const Users = new Promise( resolve => {
+// 	resolve(
+// 		fetch('http://localhost:5000/api/users')
+// 	)
+// })
+
+// Users
+// .then(res => res.json())
+// .then(res => {
+// 	console.log(res)
+// })
+
+// Product
+// .then(res => {
+// 	console.log(res)
+// })
+
+// Promise.all([Product, Users])
+// .then(res => {
+// 	const [Product, Users] = res
+// 	console.log(Product)
+// 	console.log(Users)
+// })
