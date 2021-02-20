@@ -1,14 +1,16 @@
 const Router = require('express')
 const router = Router()
-const session = require('express-session')
-const { check } = require('express-validator')
+const {check} = require('express-validator')
+const validation = require('../middleware')
 const web = require('../controllers')
+
 
 router.get('/', web.Home)
 router.get('/detail/:id', web.DetailProduct)
 
 router.get('/add-new', web.AddProduct)
-router.post('/save', [
+
+router.post('/save',[
 	check('name', 'Product name required').notEmpty().exists().withMessage('Product exists on my database'),
 	check('price', 'Product price required').isInt().withMessage('Product price interger/number only').notEmpty(),
 	check('categories', 'Product categories required').notEmpty(),

@@ -65,6 +65,8 @@ exports.AddProduct = (req, res) => {
 		id: req.session.product_id
 	}
 
+	console.log(data.errors)
+
 	res.render('pages/add', data)
 	req.session.errors=null
 	req.session.success=null

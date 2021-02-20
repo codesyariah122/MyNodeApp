@@ -16,6 +16,8 @@
 			</p>
 		{{/if}}
 
+{{!-- {{errors}} --}}
+
 			{{#if errors}}
 				{{#each errors as |data|}}
 					<p class="alert alert-danger">{{data.msg}}</p>
