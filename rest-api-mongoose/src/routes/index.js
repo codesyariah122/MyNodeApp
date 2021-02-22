@@ -3,10 +3,10 @@ import {getUsers, getUsersById, createUsers, updatedUsers, deletedUsers} from '.
 import {HomePage} from '../controllers/views/index.js'
 
 const router = Router()
-// views router
+// router views
 router.get('/', HomePage)
 
-// views api
+// route api
 router.get('/api/users', getUsers)
 router.get('/api/users/:id', getUsersById)
 router.post('/api/users/create', createUsers)

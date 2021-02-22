@@ -2,8 +2,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import dotenv from 'dotenv'
-import router from './app/routes/index.js'
-import dbconf from './app/config/index.js'
+import router from './src/routes/index.js'
+import dbconf from './src/config/index.js'
 import exphbs from 'express-handlebars'
 import path, {dirname} from 'path'
 import {fileURLToPath} from 'url'
@@ -14,7 +14,7 @@ const app = express()
 const PORT = process.env.PORT
 const __dirname = fileURLToPath(import.meta.url)
 const corsOptions = {
-	origin: 'http://localhost:5000'
+	origin: 'http://localhost:3000'
 }
 
 // handle request client

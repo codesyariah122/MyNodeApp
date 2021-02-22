@@ -212,7 +212,7 @@
 // 		}
 
 
-// 		let template = pug.renderFile('./templates/index.pug', data)
+// 		let template = pug.renderFile('./templates/pug/index.pug', data)
 // 		res.end(template)
 // 	}else if(req.url == '/about'){
 // 		let data = {
@@ -225,7 +225,7 @@
 // 			content: 'Puji Ermanto as full stack developer from West Java Bandung he is work at PT. Gemilang Citrus Berjaya as a web developer',
 // 		}
 
-// 		let template = pug.renderFile('./templates/about.pug', data)
+// 		let template = pug.renderFile('./templates/pug/about.pug', data)
 // 		res.end(template)
 // 	}else if(req.url == '/contact'){
 // 		let data = {
@@ -242,7 +242,7 @@
 // 			],
 // 		}
 
-// 		let template = pug.renderFile('./templates/contact.pug', data)
+// 		let template = pug.renderFile('./templates/pug/contact.pug', data)
 // 		res.end(template)
 // 	}
 // }).listen(3000, () => {
@@ -278,7 +278,7 @@
 // 	if(req.url == '/'){
 // 		switch(req.method){
 // 			case 'GET':
-// 				const template = pug.renderFile('./templates/form.pug')
+// 				const template = pug.renderFile('./templates/pug/form.pug')
 // 				res.end(template)
 // 			break;
 
@@ -290,7 +290,7 @@
 
 // 				req.on('end', function(){
 // 					const form = qs.parse(body);
-// 					const template = pug.renderFile('./templates/interpolasi.pug', {name: form['nama'], email: form['email']})
+// 					const template = pug.renderFile('./templates/pug/interpolasi.pug', {name: form['nama'], email: form['email']})
 // 					res.end(template)
 // 				})
 // 			break;
@@ -315,6 +315,7 @@
 //     let filePath = '.' + request.url;
 //     if (filePath == './') {
 //         filePath = './templates/html/index.html';
+//         console.log(request.originalUrl)
 //     }else if(filePath == './about'){
 //     	filePath = './templates/html/about.html';
 //     }else if(filePath == './test'){
