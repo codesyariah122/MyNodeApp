@@ -1,4 +1,4 @@
-# myvue-app
+# rest-client-vue
 
 ## Project setup
 ```
