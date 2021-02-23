@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --experimental-json-modules index.js"
+    "start": "nodemon --experimental-json-modules index.js",
+    "client":"npm start --prefix client",
+    "client-install": "npm install --prefix client",
+    "dev": "concurrently \"yarn start\" \"yarn run client\""
   },
   "keywords": [],
   "author": "",
