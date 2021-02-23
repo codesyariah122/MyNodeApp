@@ -2,8 +2,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import dotenv from 'dotenv'
-import router from './src/routes/index.js'
-import dbconf from './src/config/index.js'
+import {Router, DbConfig} from './src/index.js'
+// import dbconf from './src/config/index.js'
 import exphbs from 'express-handlebars'
 import path, {dirname} from 'path'
 import {fileURLToPath} from 'url'
@@ -25,9 +25,9 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cors(corsOptions))
 
-dbconf()
+DbConfig()
 
-app.use('/', router)
+app.use('/', Router)
 
 // views
 // with handle bars

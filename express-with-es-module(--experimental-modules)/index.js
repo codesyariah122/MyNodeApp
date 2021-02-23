@@ -14,11 +14,6 @@ const port = process.env.PORT
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 app.use(BodyParser.json())
-app.use(
-	BodyParser.urlencoded({
-		extended: false
-	})
-)
 app.use(Cors())
 app.use(CookieParser())
 app.use('/', Router)

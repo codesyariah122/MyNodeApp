@@ -1,4 +1,4 @@
-const AllData = () => {
+export const AllData = () => {
 	const data = [
 		{id: 1, name: "Admin", email: "admin@email.com"},
 		{id: 2, name: "Office", email: "office@email.com"},
@@ -11,11 +11,8 @@ const AllData = () => {
 	return data
 }
 
-const DataById = (id) => {
-	console.log(id)
-	const rows = AllData().filter(d => d.id == id)
-	return rows
-
+export const DataById = (id) => {
+	const rows = AllData().find(d => d.id == id)
+	return (!rows) ? [{message: `Id : ${id} no data found`}] : rows
 }
 
-export default {AllData, DataById}
