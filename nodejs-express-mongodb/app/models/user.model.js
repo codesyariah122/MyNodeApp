@@ -4,7 +4,7 @@ const UserModel = mongoose => {
 		email: String,
 		// published: Boolean
 	}
-		// {tim	estamps: true } 
+		// {timestamps: true } 
 	)
 
 	schema.method("toJSON", function(){
