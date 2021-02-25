@@ -12,5 +12,5 @@ export const getAllData = () => {
 
 export const getDataById = (id) => {
 	const Data = getAllData().find(d => d.id == id)
-		return (!Data) ? [{message: `Id : ${id}, Data buku tidak tersedia`}] : Dat
+		return (!Data) ? [{message: `Id : ${id}, Data buku tidak tersedia`}] : Data
 }
